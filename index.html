@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Michroma&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teste do Sid e Léo</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <form method="post" action="#">
+      <h1>Faça seu login</h1>
+      <div class="box-input">
+        <p>Nome: <span class="required-field">*</span></p>
+        <input type="text" name="inputs" maxlength="10" minlength="4" />
+
+        <p>Email: <span class="required-field">*</span></p>
+        <input type="email" name="inputs" placeholder="exemplo@exemplo.com" />
+
+        <p>Senha: <span class="required-field">*</span></p>
+        <input
+          type="password"
+          name="inputs"
+          placeholder="123456@"
+          minlength="8"
+          maxlength="8"
+        />
+
+        <p
+          class="forgot-password"
+          onclick="window.location.href = 'forgot_password.html'"
+        >
+          Esqueci minha senha
+        </p>
+
+        <button class="btn-login">Entrar</button>
+      </div>
+    </form>
+  </body>
+</html>

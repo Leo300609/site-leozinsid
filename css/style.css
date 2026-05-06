@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600&display=swap");
+
+/* body */
+body {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  background-color: #000000;
+  background-image: url("img_background.png");
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* form */
+
+form {
+  margin-left: 80px;
+}
+
+/* h1 */
+
+h1 {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 600;
+  /* Um pouco mais grossa para o título */
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #f2f2f2;
+  margin-left: 70px;
+  font-size: 30px;
+}
+
+/* todo o box-input */
+
+.box-input {
+  min-height: 300px;
+  width: 350px;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+  margin: 20px 0;
+}
+
+/* input */
+
+.box-input input {
+  width: 70%;
+  padding: 10px 15px;
+  border-radius: 15px;
+  background-color: #000000;
+  color: #f2f2f2;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  border: 2px solid #a68966;
+  box-shadow: 0 0 0px transparent;
+}
+
+.box-input input:focus {
+  border-color: #d80835;
+  box-shadow: 0 0 15px #d80835;
+}
+
+/* asterisco */
+
+.required-field {
+  color: #d80835;
+}
+
+/* paragrafo */
+
+.box-input p {
+  color: #b3b3b3;
+  text-align: left;
+  font-size: 10px;
+  width: 70%;
+  margin: 10px 0 5px 0;
+}
+
+/* botao */
+
+.box-input button {
+  border-radius: 12px;
+  border: 1.5px solid #a68966;
+  height: 30px;
+  width: 75%;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: transparent;
+  color: #f2f2f2;
+  margin-top: 35px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.box-input button:hover {
+  background-color: #d80835;
+  border-color: #d80835;
+  color: #ffffff;
+  box-shadow: 0 0 20px rgba(216, 8, 53, 0.4);
+  transform: translateY(-2px);
+}
+
+.box-input button:active {
+  transform: translateY(0px);
+}
+
+/* esqueci minha senha */
+
+.forgot-password {
+  color: #ccc;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+.forgot-password:hover {
+  color: #fff;
+}
+
+.container-recover {
+  text-align: left;
+  margin: 10px 0 5px 0;
+}
