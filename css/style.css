@@ -121,14 +121,14 @@ h1 {
 
 /* esqueci minha senha */
 
-.forgot-password {
+.links {
   color: #ccc;
   cursor: pointer;
   text-decoration: underline;
   font-size: 14px;
 }
 
-.forgot-password:hover {
+.links:hover {
   color: #fff;
 }
 
