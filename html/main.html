@@ -11,6 +11,8 @@
     <link rel="icon" type="image/png+xml" href="../img/fav-icon.png" />
 
     <style>
+      @import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600&display=swap");
+
       body {
         font-family: "Rajdhani", sans-serif;
         font-weight: 400;
@@ -18,16 +20,25 @@
         margin: 0;
         padding: 0;
         width: 100%;
-        height: 100vh;
+        /* Removi o height: 100vh para permitir o scroll da página */
         background-color: #000000;
       }
 
       /* Topo */
       header {
-        background: #0d1b2a;
+        background: #050708; /* O cinza fosco que você escolheu */
+        border-bottom: 2px solid #8e7355;
         padding: 15px 40px;
+
+        /* Mantém fixo no topo */
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+
+        /* Alinhamento dos itens */
         display: flex;
         align-items: center;
+        justify-content: space-between; /* Empurra a logo para esquerda e a lista para direita */
       }
 
       /* Logo topo */
@@ -41,7 +52,7 @@
       .logo-icon {
         width: 55px;
         height: 55px;
-        background: #c9a227;
+        background: #a68966;
         border-radius: 12px;
         display: flex;
         align-items: center;
@@ -62,6 +73,26 @@
         color: #d9d9d9;
         margin-top: -5px;
       }
+
+      /* Lista de navegação no final */
+      .list-header {
+        display: flex; /* Para os links ficarem um ao lado do outro */
+        gap: 25px; /* Espaçamento entre os links */
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .list-header a {
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s;
+      }
+
+      .list-header a:hover {
+        color: #8e7355; /* Cor bronze ao passar o mouse */
+      }
     </style>
   </head>
 
@@ -69,11 +100,18 @@
     <header>
       <div class="logo">
         <div class="logo-icon">⚖</div>
-        <div>
+        <div class="logo-info">
           <div class="logo-text">LESI</div>
           <div class="logo-sub">Assessoria Jurídica</div>
         </div>
       </div>
+
+      <ul class="list-header">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Projetos</a></li>
+        <li><a href="#">Contato</a></li>
+        <li><a href="#">Login</a></li>
+      </ul>
     </header>
   </body>
 </html>
