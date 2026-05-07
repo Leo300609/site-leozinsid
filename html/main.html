@@ -3,196 +3,83 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <link rel="stylesheet" href="../css/style_main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
     <title>LESI Consultas</title>
-
-    <!-- Favicon da guia -->
     <link rel="icon" type="image/png+xml" href="../img/fav-icon.png" />
-
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600&display=swap");
-
-      body {
-        font-family: "Rajdhani", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        background-color: #333333;
-      }
-
-      /* Topo */
-      header {
-        background: #1c1c1c;
-        border-bottom: 2px solid #8e7355;
-        padding: 15px 40px;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
-
-      .logo {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        color: white;
-      }
-
-      .logo-icon {
-        width: 55px;
-        height: 55px;
-        background: #a68966;
-        border-radius: 12px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 28px;
-        font-weight: bold;
-        color: #0d1b2a;
-      }
-
-      .logo-text {
-        font-size: 28px;
-        font-weight: bold;
-        letter-spacing: 2px;
-      }
-
-      .logo-sub {
-        font-size: 18px;
-        color: #d9d9d9;
-        margin-top: -5px;
-      }
-
-      .list-header {
-        display: flex;
-        gap: 25px;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-      }
-
-      .list-header a {
-        color: #d9d9d9;
-        text-decoration: none;
-        font-weight: 600;
-        transition: color 0.3s;
-      }
-
-      .list-header a:hover {
-        color: #8e7355;
-      }
-
-      button {
-        border-radius: 12px;
-        height: 30px;
-        width: 10rem;
-        margin-bottom: 20px;
-        font-family: "Rajdhani", sans-serif;
-        font-weight: 600;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        background-color: transparent;
-        color: #f2f2f2;
-        margin-top: 35px;
-        border: 2px solid #8e7355;
-        cursor: pointer;
-        transition: all 0.4s ease;
-        position: relative;
-        overflow: hidden;
-      }
-
-      button:hover {
-        background-color: #d80835;
-        border-color: #d80835;
-        color: #ffffff;
-        box-shadow: 0 0 5px rgba(216, 8, 53, 0.4);
-        transform: translateY(-2px);
-      }
-
-      .button {
-        transform: translateY(0px);
-      }
-
-      .search {
-        color: white;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .my-input {
-        width: 20%;
-        padding: 10px 15px;
-        border-radius: 15px;
-        background-color: transparent;
-        color: #f2f2f2;
-        outline: none;
-        transition: all 0.3s ease-in-out;
-        border: 2px solid #a68966;
-        box-shadow: 0 0 0px transparent;
-      }
-
-      .my-input:focus {
-        background-color: #1c1c1c;
-        border-color: #d80835;
-        box-shadow: 0 0 5px #d80835;
-      }
-    </style>
   </head>
 
   <body>
-    <header>
-      <div class="logo">
-        <div class="logo-icon">⚖</div>
-        <div class="logo-info">
-          <div class="logo-text">LESI</div>
-          <div class="logo-sub">Consultas Jurídicas</div>
+    <div class="wrapper">
+      <header>
+        <div class="header-left">
+          <button id="menu-toggle" onclick="toggleSidebar()">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+
+          <div class="logo">
+            <div class="logo-icon">⚖</div>
+            <div class="logo-info">
+              <div class="logo-text">LESI</div>
+              <div class="logo-sub">Consultas Jurídicas</div>
+            </div>
+          </div>
         </div>
+
+        <div class="list-header">
+          <a href="index.html" target="_blank"
+            ><button class="btn-nav">Entrar</button></a
+          >
+          <a href="index.html" target="_blank"
+            ><button class="btn-nav">Cadastre-se</button></a
+          >
+        </div>
+      </header>
+
+      <div class="content-container">
+        <aside class="sidebar" id="sidebar">
+          <h2>Menu</h2>
+          <a href="#"><i class="fa-solid fa-house"></i> Início</a>
+          <a href="#"><i class="fa-solid fa-magnifying-glass"></i> Pesquisa</a>
+          <a href="#"><i class="fa-solid fa-briefcase"></i> Meus Casos</a>
+          <a href="#"><i class="fa-solid fa-circle-question"></i> Ajuda</a>
+        </aside>
+
+        <main>
+          <div class="search">
+            <h1>Consulte seus processos jurídicos</h1>
+            <input
+              type="text"
+              id="cpf"
+              maxlength="14"
+              placeholder="Digite seu CPF: 000.000.000-00"
+              oninput="mascaraCPF(this)"
+              class="my-input"
+            />
+            <button class="btn-buscar">Buscar</button>
+          </div>
+        </main>
       </div>
+    </div>
 
-      <div class="list-header">
-        <a href="index.html" target="_blank">
-          <button>Entrar</button>
-        </a>
-        <a href="index.html" target="_blank">
-          <button>Cadastre-se</button>
-        </a>
-      </div>
-    </header>
-    <main>
-      <div class="search">
-        <h1>Consulte seus processos jurídicos</h1>
-        <input
-          type="text"
-          id="cpf"
-          maxlength="14"
-          placeholder="Digite seu CPF: 000.000.000-00"
-          oninput="mascaraCPF(this)"
-          class="my-input"
-        />
-        <script>
-          function mascaraCPF(input) {
-            let value = input.value;
+    <script>
+      // Função para mostrar/esconder a sidebar
+      function toggleSidebar() {
+        const sidebar = document.getElementById("sidebar");
+        sidebar.classList.toggle("active");
+      }
 
-            // Remove tudo que não é dígito
-            value = value.replace(/\D/g, "");
-
-            // Aplica a máscara: 000.000.000-00
-            value = value.replace(/(\d{3})(\d)/, "$1.$2");
-            value = value.replace(/(\d{3})(\d)/, "$1.$2");
-            value = value.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
-
-            input.value = value;
-          }
-        </script>
-        <button>Buscar</button>
-      </div>
-    </main>
+      function mascaraCPF(input) {
+        let value = input.value;
+        value = value.replace(/\D/g, "");
+        value = value.replace(/(\d{3})(\d)/, "$1.$2");
+        value = value.replace(/(\d{3})(\d)/, "$1.$2");
+        value = value.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
+        input.value = value;
+      }
+    </script>
   </body>
 </html>
