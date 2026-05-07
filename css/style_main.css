@@ -189,7 +189,7 @@ main {
   max-width: 450px;
   padding: 18px 25px;
   border-radius: 12px;
-  background-color: #1a1a1a;
+  background-color: transparent;
   color: #f2f2f2;
   border: 2px solid #a68966;
   outline: none;
@@ -199,6 +199,7 @@ main {
 }
 
 .my-input:focus {
+  background-color: #1c1c1c;
   border-color: #d80835;
   box-shadow: 0 0 15px rgba(216, 8, 53, 0.3);
 }
